@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff9800;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .section {
+          border: solid wheat;
+          position: relative;
+          border-radius: 10px;
+          box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.1);
+          margin: 15px;
+          width: 95%;
+          height: 162px;
+          overflow: hidden;
+          transition: transform 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+          font-size: 1.2em;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+        .section h2 {
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.5em;
+            color: #fff;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>الصفحة الرئيسية</h1>
+    <div id="sections">
+        <div class="section" onclick="navigateTo('unit1.html')">
+            <img src="images/21986.jpg" alt="Unit 1">
+            <h2>Unit 1</h2>
+        </div>
+        <div class="section" onclick="navigateTo('unit2.html')">
+            <img src="images/21986.jpg" alt="Unit 2">
+            <h2>Unit 2</h2>
+        </div>
+        <div class="section" onclick="navigateTo('unit3.html')">
+            <img src="images/21986.jpg" alt="Unit 3">
+            <h2>Unit 3</h2>
+        </div>
+        <div class="section" onclick="navigateTo('unit4.html')">
+            <img src="images/21986.jpg" alt="Unit 4">
+            <h2>Unit 4</h2>
+        </div>
+        <div class="section" onclick="navigateTo('unit5.html')">
+            <img src="images/21986.jpg" alt="Unit 5">
+            <h2>Unit 5</h2>
+        </div>
+        <div class="section" onclick="navigateTo('unit6.html')">
+            <img src="images/21986.jpg" alt="Unit 6">
+            <h2>Unit 6</h2>
+        </div>
+        <div class="section" onclick="navigateTo('ex.html')">
+            <img src="images/21986.jpg" alt="Quiz">
+            <h2>Quiz</h2>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

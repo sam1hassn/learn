@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff9800;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #sections {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .section {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .section img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+        .section h2 {
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            font-size: 1.5em;
+            color: #fff;
+            z-index: 1;
+        }
+        .exercise {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .exercise h4 {
+            font-size: 1.2em;
+            margin: 20px 0 10px;
+        }
+        .exercise ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .exercise li {
+            margin-bottom: 10px;
+        }
+        .exercise .ul-choose-answer {
+            list-style-type: none;
+            padding: 0;
+        }
+        .exercise .ul-choose-answer li {
+            margin: 5px 0;
+        }
+        .answer-key-only {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .answer-key {
+            color: green;
+            font-weight: bold;
+        }
+        .feedback {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .text-answer {
+            border: 1px solid #ddd;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EX Uint 1 </h1>
+      <div class="exercise">
+        <h4>Exercise 1</h4>
+        <div id="exercise1">
+            <h4>Part A: Choose the right word for the given definition.</h4>
+            <ol>
+                <li data-question="1" data-correct="c">bad or hurting others
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question1" value="a"> a. afraid</li>
+                        <li><input type="radio" name="question1" value="b"> b. clever</li>
+                        <li><input type="radio" name="question1" value="c"> c. cruel</li>
+                        <li><input type="radio" name="question1" value="d"> d. hunt</li>
+                    </ul>
+                </li>
+                <li data-question="2" data-correct="c">at last or at the end
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question2" value="a"> a. angry</li>
+                        <li><input type="radio" name="question2" value="b"> b. clever</li>
+                        <li><input type="radio" name="question2" value="c"> c. finally</li>
+                        <li><input type="radio" name="question2" value="d"> d. reply</li>
+                    </ul>
+                </li>
+                <li data-question="3" data-correct="a">to try to fight or hurt
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question3" value="a"> a. attack</li>
+                        <li><input type="radio" name="question3" value="b"> b. middle</li>
+                        <li><input type="radio" name="question3" value="c"> c. pleased</li>
+                        <li><input type="radio" name="question3" value="d"> d. trick</li>
+                    </ul>
+                </li>
+                <li data-question="4" data-correct="b">to not let others see
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question4" value="a"> a. agree</li>
+                        <li><input type="radio" name="question4" value="b"> b. hide</li>
+                        <li><input type="radio" name="question4" value="c"> c. safe</li>
+                        <li><input type="radio" name="question4" value="d"> d. well</li>
+                    </ul>
+                </li>
+                <li data-question="5" data-correct="a">the lowest part
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question5" value="a"> a. bottom</li>
+                        <li><input type="radio" name="question5" value="b"> b. lot</li>
+                        <li><input type="radio" name="question5" value="c"> c. moment</li>
+                        <li><input type="radio" name="question5" value="d"> d. promise</li>
+                    </ul>
+                </li>
+            </ol>
+            <h4>Part B: Choose the right definition for the given word.</h4>
+            <ol>
+                <li data-question="6" data-correct="c">angry
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question6" value="a"> a. happy</li>
+                        <li><input type="radio" name="question6" value="b"> b. low</li>
+                        <li><input type="radio" name="question6" value="c"> c. mad</li>
+                        <li><input type="radio" name="question6" value="d"> d. scared</li>
+                    </ul>
+                </li>
+                <li data-question="7" data-correct="b">moment
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question7" value="a"> a. long time</li>
+                        <li><input type="radio" name="question7" value="b"> b. short time</li>
+                        <li><input type="radio" name="question7" value="c"> c. idea</li>
+                        <li><input type="radio" name="question7" value="d"> d. solution</li>
+                    </ul>
+                </li>
+                <li data-question="8" data-correct="b">clever
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question8" value="a"> a. intelligent</li>
+                        <li><input type="radio" name="question8" value="b"> b. quick</li>
+                        <li><input type="radio" name="question8" value="c"> c. lazy</li>
+                        <li><input type="radio" name="question8" value="d"> d. poor</li>
+                    </ul>
+                </li>
+                <li data-question="9" data-correct="a">afraid
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question9" value="a"> a. scared</li>
+                        <li><input type="radio" name="question9" value="b"> b. brave</li>
+                        <li><input type="radio" name="question9" value="c"> c. sad</li>
+                        <li><input type="radio" name="question9" value="d"> d. happy</li>
+                    </ul>
+                </li>
+                <li data-question="10" data-correct="a">hide
+                    <ul class='ul-choose-answer'>
+                        <li><input type="radio" name="question10" value="a"> a. conceal</li>
+                        <li><input type="radio" name="question10" value="b"> b. show</li>
+                        <li><input type="radio" name="question10" value="c"> c. share</li>
+                        <li><input type="radio" name="question10" value="d"> d. send</li>
+                    </ul>
+                </li>
+            </ol>
+            <button class="submit-btn" onclick="checkAnswers()">Submit</button>
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let feedback = document.getElementById('feedback');
+            feedback.innerHTML = '';
+            feedback.style.display = 'block';
+
+            let correctCount = 0;
+            let totalQuestions = 10; // Number of questions
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                let selectedOption = document.querySelector(`input[name="question${i}"]:checked`);
+                let correctAnswer = document.querySelector(`li[data-question="${i}"]`).getAttribute('data-correct');
+                
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        feedback.innerHTML += `<p class='correct'>Question ${i}: Correct!</p>`;
+                        correctCount++;
+                    } else {
+                        feedback.innerHTML += `<p class='incorrect'>Question ${i}: Incorrect. The correct answer is ${correctAnswer}.</p>`;
+                    }
+                } else {
+                    feedback.innerHTML += `<p class='incorrect'>Question ${i}: No answer selected.</p>`;
+                }
+            }
+            
+            feedback.innerHTML += `<p>Total Correct Answers: ${correctCount} out of ${totalQuestions}</p>`;
+        }
+    </script>
+</body>
+</html>
